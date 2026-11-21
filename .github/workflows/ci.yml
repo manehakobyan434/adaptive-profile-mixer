@@ -21,5 +21,7 @@ jobs:
         run: python anti.py selftest
       - name: App request guard and command whitelist
         run: python app.py --selftest
-      - name: Browser channels compile
-        run: python -m py_compile browse.py
+      - name: NymVPN guard
+        run: python nym.py --selftest
+      - name: All modules compile
+        run: python -m py_compile persona.py anti.py app.py browse.py nym.py
